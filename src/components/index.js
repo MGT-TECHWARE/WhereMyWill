@@ -1,0 +1,11 @@
+export { default as Navbar } from './Navbar';
+export { default as Hero } from './Hero';
+export { default as Marquee } from './Marquee';
+export { default as Features } from './Features';
+export { default as Process } from './Process';
+export { default as Pricing } from './Pricing';
+export { default as About } from './About';
+export { default as FAQ } from './FAQ';
+export { default as Contact } from './Contact';
+export { default as CTA } from './CTA';
+export { default as Footer } from './Footer';
