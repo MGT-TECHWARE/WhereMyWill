@@ -60,13 +60,13 @@ const Hero = () => {
 
             {/* Title */}
             <h1 className="text-display-hero font-medium">
-              <span className="block overflow-hidden">
+              <span className="block overflow-hidden py-[0.1em]">
                 <span className="hero-line block">Protect</span>
               </span>
-              <span className="block overflow-hidden">
+              <span className="block overflow-hidden py-[0.1em]">
                 <span className="hero-line block font-serif italic">Your</span>
               </span>
-              <span className="block overflow-hidden">
+              <span className="block overflow-hidden py-[0.1em]">
                 <span className="hero-line block">Legacy</span>
               </span>
             </h1>
