@@ -31,8 +31,8 @@ const Navbar = () => {
     <nav
       ref={scope}
       className={clsx(
-        'fixed top-0 left-0 right-0 z-[1000] py-6 transition-all duration-500 ease-out-expo',
-        isScrolled && 'bg-cream/90 backdrop-blur-xl py-4'
+        'fixed top-0 left-0 right-0 z-[1000] py-3 transition-all duration-500 ease-out-expo',
+        isScrolled && 'bg-cream/90 backdrop-blur-xl py-2'
       )}
     >
       <div className="container">
@@ -42,7 +42,10 @@ const Navbar = () => {
             <img
               src="/images/logo.png"
               alt={COMPANY_INFO.name}
-              className="h-20 w-20 md:h-28 md:w-28 lg:h-40 lg:w-40 object-contain transition-transform duration-500 ease-out-expo group-hover:scale-105"
+              className={clsx(
+                'object-contain transition-all duration-500 ease-out-expo group-hover:scale-105',
+                isScrolled ? 'h-12 w-12 md:h-14 md:w-14' : 'h-24 w-24 md:h-32 md:w-32'
+              )}
             />
           </a>
 
