@@ -32,7 +32,7 @@ const Navbar = () => {
       ref={scope}
       className={clsx(
         'fixed top-0 left-0 right-0 z-[1000] py-3 transition-all duration-500 ease-out-expo',
-        isScrolled && 'bg-cream/90 backdrop-blur-xl py-2'
+        (isScrolled || menuOpen) && 'bg-cream backdrop-blur-xl py-2'
       )}
     >
       <div className="container">
@@ -111,7 +111,7 @@ const Navbar = () => {
         <div
           className={clsx(
             'lg:hidden overflow-hidden transition-all duration-500 ease-out-expo',
-            menuOpen ? 'max-h-80 mt-6' : 'max-h-0'
+            menuOpen ? 'max-h-screen mt-6' : 'max-h-0'
           )}
         >
           <ul className="list-none flex flex-col gap-4 py-4 border-t border-primary/10">
