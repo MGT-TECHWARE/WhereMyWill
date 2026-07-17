@@ -44,7 +44,7 @@ const Navbar = () => {
               alt={COMPANY_INFO.name}
               className={clsx(
                 'object-contain transition-all duration-500 ease-out-expo group-hover:scale-105',
-                isScrolled ? 'h-12 w-12 md:h-14 md:w-14' : 'h-24 w-24 md:h-32 md:w-32'
+                isScrolled ? 'h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16' : 'h-32 w-32 md:h-40 md:w-40 lg:h-52 lg:w-52'
               )}
             />
           </a>

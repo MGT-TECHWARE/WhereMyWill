@@ -64,6 +64,8 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [sending, setSending] = useState(false);
 
   const scope = useGSAP((gsap) => {
     const tl = gsap.timeline({
@@ -100,9 +102,29 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setSending(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you soon.' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus({ type: 'error', message: 'Something went wrong. Please try again or email us directly.' });
+      }
+    } catch {
+      setStatus({ type: 'error', message: 'Something went wrong. Please try again or email us directly.' });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -194,9 +216,19 @@ const Contact = () => {
               />
             </div>
 
+            {status.message && (
+              <div className={`mb-4 px-4 py-3 rounded-xl text-sm font-medium ${
+                status.type === 'success'
+                  ? 'bg-green-50 text-green-700 border border-green-200'
+                  : 'bg-red-50 text-red-700 border border-red-200'
+              }`}>
+                {status.message}
+              </div>
+            )}
+
             <div className="contact-field">
-              <Button type="submit" variant="gold" icon className="w-full justify-center mt-1">
-                Send Message
+              <Button type="submit" variant="gold" icon className="w-full justify-center mt-1" disabled={sending}>
+                {sending ? 'Sending...' : 'Send Message'}
               </Button>
             </div>
           </form>

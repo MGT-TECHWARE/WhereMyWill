@@ -26,7 +26,7 @@ module.exports = {
         serif: ['Instrument Serif', 'Georgia', 'serif'],
       },
       fontSize: {
-        'display-hero': ['clamp(4rem, 15vw, 12rem)', { lineHeight: '0.85', letterSpacing: '-0.04em' }],
+        'display-hero': ['clamp(4rem, 8vw, 8rem)', { lineHeight: '0.85', letterSpacing: '-0.04em' }],
         'display-xl': ['clamp(3rem, 8vw, 6rem)', { lineHeight: '0.9', letterSpacing: '-0.03em' }],
         'display-lg': ['clamp(2rem, 5vw, 4rem)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
       },

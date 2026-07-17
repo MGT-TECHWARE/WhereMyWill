@@ -48,10 +48,10 @@ const CTA = () => {
             Protect What <span className="font-serif italic">Matters</span>
           </h2>
           <p className="cta-text text-xl text-primary/60 mb-4">
-            For just ${COMPANY_INFO.price} for the first year, ensure your will is safe, accessible, and ready to honor your wishes.
+            For a one-time payment of just ${COMPANY_INFO.price}, ensure your will is safe, accessible, and ready to honor your wishes.
           </p>
           <p className="cta-text text-base text-primary/40 mb-10">
-            Opening promo — ${COMPANY_INFO.priceAfterPromo}/year after your first year
+            Grand opening special — regular price ${COMPANY_INFO.priceAfterPromo} after our first year
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button
@@ -61,7 +61,7 @@ const CTA = () => {
               className="cta-btn"
               onClick={(e) => scrollToSection(e, 'pricing')}
             >
-              Get Started for ${COMPANY_INFO.price}/yr
+              Get Started for ${COMPANY_INFO.price}
             </Button>
             <Button
               href="#contact"

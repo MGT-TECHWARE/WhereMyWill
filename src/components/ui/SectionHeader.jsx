@@ -51,12 +51,12 @@ const SectionHeader = ({
       <div className="max-w-[700px]">
         <h2 className="text-display-lg font-medium mb-6">
           {titleWords.map((word, i) => (
-            <span key={i} className="inline-block overflow-hidden mr-[0.3em]">
+            <span key={i} className="inline-block overflow-hidden mr-[0.3em] pb-[0.15em]">
               <span className="section-word inline-block">{word}</span>
             </span>
           ))}
           {titleHighlight && (
-            <span className="inline-block overflow-hidden">
+            <span className="inline-block overflow-hidden pb-[0.15em]">
               <span className="section-word inline-block font-serif italic">{titleHighlight}</span>
             </span>
           )}

@@ -87,7 +87,7 @@ const Hero = () => {
                 icon
                 onClick={(e) => scrollToSection(e, 'pricing')}
               >
-                Start for ${COMPANY_INFO.price}/yr
+                <span className="line-through opacity-60">${COMPANY_INFO.priceAfterPromo}</span> Start for ${COMPANY_INFO.price}
               </Button>
               <Button
                 href="#process"
@@ -118,8 +118,11 @@ const Hero = () => {
                 <div className="text-xs tracking-[0.08em] uppercase text-warm-gray mt-2">Protected</div>
               </div>
               <div className="hero-stat">
-                <div className="text-4xl font-medium tracking-tight leading-none">${COMPANY_INFO.price}</div>
-                <div className="text-xs tracking-[0.08em] uppercase text-warm-gray mt-2">First Year</div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-medium tracking-tight leading-none line-through text-warm-gray">${COMPANY_INFO.priceAfterPromo}</span>
+                  <span className="text-4xl font-medium tracking-tight leading-none">${COMPANY_INFO.price}</span>
+                </div>
+                <div className="text-xs tracking-[0.08em] uppercase text-warm-gray mt-2">One-Time Payment</div>
               </div>
             </div>
           </div>

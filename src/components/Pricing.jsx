@@ -24,9 +24,9 @@ const Pricing = () => {
       <div className="container">
         <SectionHeader
           number="03"
-          title="One"
-          titleHighlight="Simple"
-          description="Simple, transparent pricing. Just secure, professional storage for your most important documents."
+          title="One Simple"
+          titleHighlight="Payment"
+          description="Simple, transparent pricing. One-time payment for secure, professional storage of your most important documents."
         />
 
         <div className="max-w-[520px] mx-auto">
@@ -36,7 +36,7 @@ const Pricing = () => {
 
             {/* Badge */}
             <span className="pricing-badge inline-block bg-gold text-primary px-5 py-2 rounded-full text-[11px] font-semibold tracking-[0.1em] uppercase mb-5">
-              Opening Promo
+              Grand Opening Special
             </span>
 
             {/* Title */}
@@ -44,15 +44,23 @@ const Pricing = () => {
               Will Storage Service
             </h3>
 
-            {/* Price */}
-            <div className="pricing-amount flex items-baseline justify-center gap-1 mb-1">
+            {/* Regular Price - Strikethrough */}
+            <div className="pricing-amount flex items-baseline justify-center gap-1 mb-2">
+              <span className="text-2xl text-white/30">$</span>
+              <span className="text-6xl font-medium leading-none tracking-tight text-white/30 line-through decoration-gold/60 decoration-2">
+                {COMPANY_INFO.priceAfterPromo}
+              </span>
+            </div>
+
+            {/* Promo Price */}
+            <div className="flex items-baseline justify-center gap-1 mb-1">
               <span className="text-3xl text-gold">$</span>
-              <span className="text-7xl font-medium leading-none tracking-tight">
+              <span className="text-7xl font-medium leading-none tracking-tight text-gold">
                 {COMPANY_INFO.price}
               </span>
             </div>
-            <p className="pricing-sub text-sm text-white/40 mb-1">for the first year • Opening promo</p>
-            <p className="pricing-sub text-xs text-white/30 mb-8">${COMPANY_INFO.priceAfterPromo}/year after your first year</p>
+            <p className="pricing-sub text-sm text-gold/80 font-medium mb-1">Grand Opening Price • One-Time Payment</p>
+            <p className="pricing-sub text-xs text-white/30 mb-8">Regular price ${COMPANY_INFO.priceAfterPromo} after our grand opening</p>
 
             {/* Features */}
             <ul className="text-left mb-8 space-y-0">

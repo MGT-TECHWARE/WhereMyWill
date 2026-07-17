@@ -52,7 +52,7 @@ export const PROCESS_STEPS = [
   {
     number: '01',
     title: 'Register Online',
-    description: 'Complete our simple form and pay the $99 first-year opening promo fee to get started.',
+    description: 'Complete our simple form and pay the one-time $99 grand opening fee to get started.',
   },
   {
     number: '02',
@@ -109,5 +109,5 @@ export const MARQUEE_ITEMS = [
   'Verified Access',
   'Dallas, Texas',
   'Peace of Mind',
-  'Annual Storage',
+  'Secure Storage',
 ];
